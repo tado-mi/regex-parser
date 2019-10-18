@@ -2,24 +2,23 @@
 #include <stdlib.h>
 
 #include "tree.h"
+#include "stack.h"
+#include "header.h"
+
 // recursive descent parser
 #include "rdp.h"
+// table driven parser
+#include "tdp.h"
 
-void process() {
-  printf("processing input: [%s]\n", input);
-  TREE E_tree = E();
-  if (E_tree == NULL) {
-    printf("tree was not constructed\n");
-  } else if (*input != '\0') {
-    printf("input contained a valid substring\n");
-    printf("remaining chars: [%s]", input);
-    return;
-  }
-  printf("tree construction succeeded:\n");
-  print_TREE(E_tree);
-}
+
 
 int main() {
+
   input = "a|(c.d)*";
-  process();
+
+  // parse_RDP();
+
+  parse_TDP();
+
+
 }

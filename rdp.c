@@ -14,6 +14,23 @@ TREE C(); TREE CT();
 TREE S(); TREE ST();
 TREE A();
 
+void parse_RDP() {
+  char* str = input;
+  printf("processing input: [%s]\n", input);
+  TREE tree = E();
+  if (tree == NULL) {
+    printf("tree was not constructed\n");
+  } else if (*input != '\0') {
+    printf("input contained a valid substring\n");
+    printf("remaining chars: [%s]", input);
+    return;
+  }
+  printf("tree construction succeeded:\n");
+  print_TREE(tree);
+  // recover the input
+  input = str;
+}
+
 TREE E() {
   // <E> -> <C><ET>
   TREE E_tree = new_TREE("<E>");
