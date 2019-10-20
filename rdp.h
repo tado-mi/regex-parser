@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "header.h"
+// data structures
 #include "tree.h"
 
-extern void parse_RDP(void);
+#include "input.h"
+
+extern TREE recursive(void);

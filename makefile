@@ -6,13 +6,16 @@ CC = gcc
 # -Wall	turn on (most) compiler warnings
 CFLAGS = -g -Wall
 
-TARGET = *
-OUTFILE = a2.out
+TARGET = main
+OUTFILE = main.o
 
 all: $(TARGET)
 
 $(TARGET): $(TARGET).c
 	$(CC) $(CFLAGS) $(TARGET).c -o $(OUTFILE)
+
+do:
+	$(CC) *.c -o $(OUTFILE)
 
 run:
 	./$(OUTFILE)

@@ -39,7 +39,7 @@ void printh_TREE(TREE tree, int level) {
   for (int i = 0; i < level; i = i + 1) {
     printf("  ");
   }
-  printf("%s\n", tree->label);
+  printf("%s\n", (*tree).label);
 
   level = level + 1;
   TREE temp = (*tree).child;
@@ -51,4 +51,32 @@ void printh_TREE(TREE tree, int level) {
 
 void print_TREE(TREE tree) {
   printh_TREE(tree, 0);
+}
+
+// helper functions
+char* get_label(TREE tree) {
+  if (tree == NULL)
+    return "∅";
+  return (*tree).label;
+}
+
+int num_children(TREE tree) {
+  int ans = 0;
+  TREE temp = (*tree).child;
+  while (temp != NULL) {
+    ans = ans + 1;
+    temp = (*temp).sibling;
+  }
+  return ans;
+}
+
+TREE* get_children(TREE tree) {
+  int n = num_children(tree);
+  TREE* ans = malloc(n * sizeof(TREE));
+  TREE temp = (*tree).child;
+  for (int i = 0; i < n; i = i + 1) {
+    *(ans + i) = temp;
+    temp = (*temp).sibling;
+  }
+  return ans;
 }

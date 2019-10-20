@@ -3,8 +3,6 @@
 
 #include "tree.h"
 
-#define MAX 200
-
 typedef struct STACK *STACK;
 extern STACK new_STACK();
 extern void print_STACK(STACK stack);
