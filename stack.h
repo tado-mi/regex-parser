@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "tree.h"
+// #include "tree.h"
 
 typedef struct STACK *STACK;
 extern STACK new_STACK();
