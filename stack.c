@@ -16,6 +16,15 @@ STACK new_STACK() {
   return stack;
 }
 
+STACK reverse(STACK stack) {
+  STACK ans = new_STACK();
+  while (!is_empty(stack)) {
+    NODE temp = pop(stack);
+    push(ans, temp);
+  }
+  return ans;
+}
+
 void push(STACK stack, void* data) {
   NODE new = malloc(sizeof(struct NODE));
   (*new).data = data;
@@ -34,16 +43,30 @@ void* pop(STACK stack) {
 
 }
 
+void* peek(STACK stack) {
+  if (is_empty(stack)) {
+    return NULL;
+  }
+  NODE top = (*stack).top;
+  return (*top).data;
+
+}
+
 int is_empty(STACK stack) {
   NODE top = (*stack).top;
   return top == NULL;
 }
 
-void print_STACK(STACK stack) {
-  printf("\n");
+// usage: print_stack(stack, &print_function_name)
+void print_STACK(STACK stack, void (*f)()) { // receive address of f : a print function
+
   NODE top = (*stack).top;
   while (top != NULL) {
-    printf("%s\n", (char*)(*top).data);
+    if (f == NULL) {
+      printf("%s\n", (char*)(*top).data);
+    } else {
+      f((*top).data);
+    }
     top = (*top).next;
   }
   printf("________________\n");
