@@ -3,8 +3,8 @@
 #include <string.h>
 
 // data structures
-#include "tree.h"
-#include "stack.h"
+#include "../../data-struct/tree.h"
+#include "../../data-struct/stack.h"
 
 // recursive descent parser
 #include "rdp.h"
@@ -18,7 +18,6 @@
 #define RDP  "RDP"
 #define EVAL "EVAL"
 
-char* input;
 #include "input.h"
 
 void parse(char* method) {
@@ -57,8 +56,6 @@ void parse(char* method) {
   printf("tree construction succeeded:\n");
   print_TREE(tree);
 
-  // recover the input
-  // input = str;
 }
 
 void interact() {

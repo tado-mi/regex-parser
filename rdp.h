@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 // data structures
-#include "tree.h"
+#include "../../data-struct/tree.h"
+#include "../../data-struct/stack.h"
 
 #include "input.h"
 

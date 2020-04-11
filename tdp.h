@@ -3,8 +3,9 @@
 #include <string.h>
 
 // data struct
-#include "tree.h"
-#include "stack.h"
+// #include "tree.h"
+#include "../../data-struct/tree.h"
+#include "../../data-struct/stack.h"
 
 #include "input.h"
 

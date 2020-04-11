@@ -1,5 +1,5 @@
 // table driven parser
-#include "tdp.h"
+#include "../tdp.h"
 
 // syntactic categories
 int num_synt = 7;

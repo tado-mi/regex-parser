@@ -1,5 +1,5 @@
 // recursive decent parser
-#include "rdp.h"
+#include "../rdp.h"
 
 // declare all the functions,
 // so they can be called recursively,

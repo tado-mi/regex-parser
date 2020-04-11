@@ -1,8 +1,8 @@
-// data structures
-#include "tree.h"
+// recursive descent parser
+#include "../rdp.h"
 
 // evaluator
-#include "eval.h"
+#include "../eval.h"
 
 void preorder(TREE tree) {
   if (tree == NULL)
@@ -104,5 +104,13 @@ void evaluate(TREE full) {
   printf("preorder evaluation:\n");
   preorder(expr);
   printf("\n");
+
+}
+
+TREE get_tree(char* regex) {
+
+  TREE tree = recursive();
+  tree = expression(tree);
+  return tree;
 
 }
