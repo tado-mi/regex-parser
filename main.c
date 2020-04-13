@@ -3,8 +3,8 @@
 #include <string.h>
 
 // data structures
-#include "../../data-struct/tree.h"
-#include "../../data-struct/stack.h"
+#include "../data-struct/tree.h"
+#include "../data-struct/stack.h"
 
 // recursive descent parser
 #include "rdp.h"

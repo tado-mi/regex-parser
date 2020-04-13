@@ -9,7 +9,7 @@ CFLAGS = -g -Wall
 TARGET = main
 OUTFILE = main.o
 
-DATA_STRUCTS = ../../data-struct/src
+DATA_STRUCTS = ../data-struct/src
 SRC = src
 
 all: $(TARGET)

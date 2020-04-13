@@ -3,7 +3,7 @@
 #include <string.h>
 
 // data structures
-#include "../../data-struct/tree.h"
+#include "../data-struct/tree.h"
 
 #include "input.h"
 

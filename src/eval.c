@@ -109,6 +109,9 @@ void evaluate(TREE full) {
 
 TREE get_tree(char* regex) {
 
+  // update input
+  input = regex;
+
   TREE tree = recursive();
   tree = expression(tree);
   return tree;
